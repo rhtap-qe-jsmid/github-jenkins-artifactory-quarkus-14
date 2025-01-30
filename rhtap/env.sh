@@ -9,7 +9,7 @@ TAG=$(git rev-parse HEAD)
 export IMAGE_URL=${IMAGE_URL-artifactory-artifactory-jcr.apps.rosa.rhtap-services.xmdt.p3.openshiftapps.com/rhtap-docker-local/rhtap-qe-jsmid:$CI_TYPE-$TAG}
 export IMAGE=${IMAGE-$IMAGE_URL}
 
-export DOCKERFILE=${DOCKERFILE-docker/Dockerfile}
+export DOCKERFILE=${DOCKERFILE-src/main/docker/Dockerfile.jvm.staged}
 export CONTEXT=${CONTEXT-.}
 export TLSVERIFY=${TLSVERIFY-false}
 export BUILD_ARGS=${BUILD_ARGS-""}
